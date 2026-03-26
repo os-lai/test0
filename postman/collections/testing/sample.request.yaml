@@ -1,5 +1,5 @@
 $kind: http-request
 name: sample
-url: https://postman-echo.com/get
+url: http://127.0.0.1:8000
 method: GET
 order: 1586521021874823

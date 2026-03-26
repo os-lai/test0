@@ -3,7 +3,10 @@ from typing import List, Optional
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
+from routers import tasks
+
 app = FastAPI(title="test0 API", version="0.1.0")
+app.include_router(tasks.router)
 
 _items: dict = {}
 _next_id = 1
@@ -20,7 +23,11 @@ class Item(ItemCreate):
 
 @app.get("/")
 def root():
-    return {"message": "Hello from test0 API", "docs": "/docs"}
+    return {
+        "message": "Hello from test0 API",
+        "docs": "/docs",
+        "apis": ["/items", "/tasks"],
+    }
 
 
 @app.get("/health")
