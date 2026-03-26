@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>test0 — Items &amp; Tasks</title>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link rel="stylesheet" href="/static/styles.css?v=__CSS_VER__" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="clouds" id="clouds" aria-hidden="true"></div>
+      <div class="wrap">
+      <header>
+        <h1>test0</h1>
+        <div class="links">
+          <span id="health" class="badge">…</span>
+          <a href="/docs" target="_blank" rel="noopener">API docs</a>
+          <a href="/api/info">JSON info</a>
+          <button type="button" class="secondary" id="btn-refresh">Refresh</button>
+        </div>
+      </header>
+
+      <div id="msg" class="msg" role="status"></div>
+
+      <div class="grid">
+        <section class="panel" aria-labelledby="items-heading">
+          <h2 id="items-heading">Items</h2>
+          <form id="form-item" class="row inline">
+            <label>
+              Name
+              <input id="item-name" type="text" name="name" required maxlength="200" placeholder="e.g. Widget" />
+            </label>
+            <label>
+              Description
+              <textarea id="item-desc" name="description" maxlength="2000" placeholder="Optional"></textarea>
+            </label>
+            <button type="submit">Add item</button>
+          </form>
+          <ul id="items-list" class="list"></ul>
+        </section>
+
+        <section class="panel" aria-labelledby="tasks-heading">
+          <h2 id="tasks-heading">Tasks</h2>
+          <form id="form-task" class="row inline">
+            <label>
+              Title
+              <input id="task-title" type="text" name="title" required maxlength="200" placeholder="e.g. Ship v1" />
+            </label>
+            <label class="chk">
+              <input id="task-done" type="checkbox" name="done" />
+              Done
+            </label>
+            <button type="submit">Add task</button>
+          </form>
+          <ul id="tasks-list" class="list"></ul>
+        </section>
+      </div>
+    </div>
+    </div>
+    <script src="/static/app.js?v=__JS_VER__" defer></script>
+  </body>
+</html>
