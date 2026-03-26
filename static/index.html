@@ -3,61 +3,99 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>test0 — Items &amp; Tasks</title>
-    <meta http-equiv="Cache-Control" content="no-cache" />
+    <title>Your Name — Portfolio</title>
+    <meta name="description" content="Portfolio template — replace with your summary." />
     <link rel="stylesheet" href="/static/styles.css?v=__CSS_VER__" />
   </head>
   <body>
-    <div class="page">
-      <div class="clouds" id="clouds" aria-hidden="true"></div>
-      <div class="wrap">
-      <header>
-        <h1>test0</h1>
-        <div class="links">
-          <span id="health" class="badge">…</span>
-          <a href="/docs" target="_blank" rel="noopener">API docs</a>
-          <a href="/api/info">JSON info</a>
-          <button type="button" class="secondary" id="btn-refresh">Refresh</button>
-        </div>
-      </header>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <div id="msg" class="msg" role="status"></div>
-
-      <div class="grid">
-        <section class="panel" aria-labelledby="items-heading">
-          <h2 id="items-heading">Items</h2>
-          <form id="form-item" class="row inline">
-            <label>
-              Name
-              <input id="item-name" type="text" name="name" required maxlength="200" placeholder="e.g. Widget" />
-            </label>
-            <label>
-              Description
-              <textarea id="item-desc" name="description" maxlength="2000" placeholder="Optional"></textarea>
-            </label>
-            <button type="submit">Add item</button>
-          </form>
-          <ul id="items-list" class="list"></ul>
-        </section>
-
-        <section class="panel" aria-labelledby="tasks-heading">
-          <h2 id="tasks-heading">Tasks</h2>
-          <form id="form-task" class="row inline">
-            <label>
-              Title
-              <input id="task-title" type="text" name="title" required maxlength="200" placeholder="e.g. Ship v1" />
-            </label>
-            <label class="chk">
-              <input id="task-done" type="checkbox" name="done" />
-              Done
-            </label>
-            <button type="submit">Add task</button>
-          </form>
-          <ul id="tasks-list" class="list"></ul>
-        </section>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#">Your Name</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" hidden>
+          Menu
+        </button>
+        <nav id="site-nav" class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
-    </div>
-    </div>
-    <script src="/static/app.js?v=__JS_VER__" defer></script>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container">
+          <p class="eyebrow">Hello, I’m</p>
+          <h1>Your Name</h1>
+          <p class="lede">
+            Short one-line pitch — e.g. product designer, full-stack developer, or researcher. Edit this
+            text in <code>static/index.html</code>.
+          </p>
+          <p class="hero-actions">
+            <a class="btn btn-primary" href="#work">View work</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container narrow">
+          <h2>About</h2>
+          <p>
+            Replace this paragraph with a short bio: who you are, what you care about, and what you’re
+            looking for next. Two or three sentences is enough for a template.
+          </p>
+          <p>
+            Optional second paragraph for background, education, or tools you like — keep it scannable.
+          </p>
+        </div>
+      </section>
+
+      <section id="work" class="section section-alt">
+        <div class="container">
+          <h2>Selected work</h2>
+          <p class="section-intro">Placeholder projects — swap titles, copy, and links for your own.</p>
+          <ul class="project-grid">
+            <li class="project-card">
+              <h3>Project Alpha</h3>
+              <p>Brief description of the problem and your role. One or two lines.</p>
+              <a href="#" class="card-link">View details →</a>
+            </li>
+            <li class="project-card">
+              <h3>Project Beta</h3>
+              <p>Another example card. Link to a case study, repo, or live site.</p>
+              <a href="#" class="card-link">View details →</a>
+            </li>
+            <li class="project-card">
+              <h3>Project Gamma</h3>
+              <p>Duplicate or remove cards in the HTML to match your portfolio.</p>
+              <a href="#" class="card-link">View details →</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container narrow">
+          <h2>Contact</h2>
+          <p>Open to opportunities or collaborations — reach out.</p>
+          <ul class="contact-list">
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+            <li><a href="https://github.com/" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+            <li><a href="https://linkedin.com/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Your Name. Built as a simple static template.</p>
+      </div>
+    </footer>
+
+    <script src="/static/site.js?v=__JS_VER__" defer></script>
   </body>
 </html>
