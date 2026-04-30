@@ -3,12 +3,47 @@ workspace:
   id: ""
 
 # Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
 cloudResources:
   collections:
     ../postman/collections/testing: 40797620-32aa2f78-e113-445e-b47c-26c7ced10f8d
   environments:
     ../postman/environments/Env 1.environment.yaml: 9ab6a29c-c10d-49a5-a962-44cda03a0ed2
     ../postman/environments/Env 222222.environment.yaml: 588e8a23-c8ba-4b82-bbac-bf3aed125377
+
+dependencies:
+  collections:
+    1149906-415d0b21-ec08-43a7-a0d6-53f7b7c761f9:
+      name: Postman Echo
+      path: ../postman/.dependencies/collections/Postman Echo
+    6291-2981dbae-b0c7-452f-8ac0-674698867b3f:
+      name: AWS IAM MFA Audit
+      path: ../postman/.dependencies/collections/AWS IAM MFA Audit
+    1265367-96e7b007-732c-4fd5-a844-e3ccd18ef607:
+      name: "RESTful API Basics #blueprint"
+      path: "../postman/.dependencies/collections/RESTful API Basics #blueprint"
+    568905-993c5cc1-244b-45dd-87a3-e020015f3aee:
+      name: Postman API
+      path: ../postman/.dependencies/collections/Postman API
+    120403-7ca08909-d5ba-42cf-bd1d-31d2a857f96c:
+      name: New Collection
+      path: ../postman/.dependencies/collections/New Collection
+    1265367-1aa6e53a-8142-47ee-9ffa-908ec6776c84:
+      name: Data Visualization
+      path: ../postman/.dependencies/collections/Data Visualization
+    7328-1c3cc151-84f5-49b6-805b-3901a5544354:
+      name: Lunch Picker
+      path: ../postman/.dependencies/collections/Lunch Picker
+    525961-406bfd2e-9aca-482f-8503-626609234b52:
+      name: aaaaaaaaaaaaaaa
+      path: ../postman/.dependencies/collections/aaaaaaaaaaaaaaa
+    558568-05ddabac-6588-4789-b4e3-79c45fcb89b3:
+      name: API
+      path: ../postman/.dependencies/collections/API
+  environments:
+    500773-178064a8-fdf9-4a1e-85ba-330d323d37a3:
+      name: New Environment
+      path: ../postman/.dependencies/environments/New Environment-1.environment.yaml
 
 # All resources in the `postman/` folder are automatically registered in Local View.
 # Point to additional files outside the `postman/` folder to register them individually. Example:
