@@ -52,7 +52,7 @@
 
     var title = document.createElement("p");
     title.className = "calendar-month-label";
-    title.textContent = monthNames[month] + " " + year;
+    title.textContent = monthNames[month] + " " + year + " · calendar";
     wrap.appendChild(title);
 
     var grid = document.createElement("div");

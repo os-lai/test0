@@ -7,7 +7,7 @@ from starlette.requests import Request
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 
-app = FastAPI(title="Portfolio", version="0.1.0")
+app = FastAPI(title="Portfolio", version="0.1.1-dev")
 
 
 @app.middleware("http")
@@ -43,4 +43,4 @@ app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {"status": "ok", "workspace": "test0"}
