@@ -1,0 +1,25 @@
+panels:
+  - name: collections
+    panelType: 1
+    items:
+      - relativePath: postman/collections/testing
+        elementType: collection
+  - name: environments
+    panelType: 1
+  - name: uncategorized
+    panelType: 1
+    isUncategorized: true
+    items:
+      - relativePath: postman/environments/Env 222222.environment.yaml
+        elementType: environment
+      - relativePath: postman/environments/Env 1.environment.yaml
+        elementType: environment
+  - name: new
+    panelType: 1
+  - name: new section
+    panelType: 1
+  - name: mocks
+    panelType: 2
+  - name: uncategorized
+    panelType: 2
+    isUncategorized: true
