@@ -1,3 +1,6 @@
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
 cloudResources:
   collections:
     ../postman/collections/testing: 40797620-1670be80-50b6-45db-926f-e64e1aad5aa7
@@ -6,6 +9,7 @@ cloudResources:
     ../postman/environments/Env 222222.environment.yaml: 40797620-711d3807-52a0-43ef-9c46-b6cc8ed22497
   globals:
     ../postman/globals/workspace.globals.yaml: a3aa660f-581f-48b4-8f72-5582eaa27534
+
 dependencies:
   collections: {}
   environments: {}
