@@ -1,0 +1,46 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # ── Postman API Tests ──────────────────────────────────────────────────
+      - name: Install Postman CLI
+        run: curl -o- "https://dl-cli.pstmn.io/install/linux_64.sh" | sh
+
+      - name: Run Postman Tests
+        run: |
+          postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
+          postman collection run postman/collections/testing \
+            -e "postman/environments/Env 1.environment.yaml" \
+            --bail \
+            --reporters cli,junit \
+            --reporter-junit-export results.xml
+
+      - name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: postman-test-results
+          path: results.xml
+
+      # ── Deploy to GitHub Pages ─────────────────────────────────────────────
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main' && success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          exclude_assets: '.github,postman,static,main.py,requirements.txt,run.sh,new file,results.xml'
